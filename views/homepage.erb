@@ -1,0 +1,26 @@
+<div class="col-md-12 ">
+  <% @posts.each do |post| %>
+
+      <div class="">
+        <p><%= post.name %> </p>
+        <p><%= post.description %> </p>
+        <p>tags: <%= post.tags %> </p>
+        <p>Score: <%= post.vote_amount %> </p>
+        <p>Neighborhood: <%= post.neighborhood %> </p>
+        <p>Author: <%= User[id: post.poster_id].username %> </p>
+        <hr>
+
+          <form class="form-inline" action="/postaurants/voteup" method="post">
+            <div class="form-group">
+              <input type="hidden" name="id" value="<%= post.id %>">
+              <button class="btn-primary" type="submit" name="button">Vote up</button>
+            </div>
+          </form>
+          <form class="form-inline" action="/restaurants/votedown" method="post">
+            <div class="form-group">
+              <input type="hidden" name="id" value="<%= post.id %>">
+              <button class="btn-danger" type="submit" name="button">Vote down</button>
+            </div>
+          </form>
+      </div>
+  <% end %>
