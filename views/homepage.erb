@@ -1,14 +1,17 @@
-<div class="col-md-12 ">
-  <% @posts.each do |post| %>
+<div class="col s12 ">
 
-      <div class="">
-        <p><%= post.name %> </p>
-        <p><%= post.description %> </p>
-        <p>tags: <%= post.tags %> </p>
-        <p>Score: <%= post.vote_amount %> </p>
-        <p>Neighborhood: <%= post.neighborhood %> </p>
-        <p>Author: <%= User[id: post.poster_id].username %> </p>
-        <hr>
+  <% if session[:logged_in] == true %>
+    <div class="">
+      Welcome to YOU LOOK GOOD! Women regularly ask the question: "How do I look?" This is a site to tell you YOU LOOK GOOD! What you see isn't what the world sees. You may see imperfections. We see beauty. We see uniqueness. See the beauty that we see!!! Post pictures of yourself and get ready to feel the love from the YLG community! We are a culture of positivity - any negative comments will be removed! Please post responsibly. No nudity or graphic content!
+    </div>
+  <% else %>
+    <% @posts.each do |post| %>
+        <div class="post">
+          <p>This is <%= User[id: post.poster_id].username %> </p>
+          <p><%= post.description %> </p>
+          <p>TELL HER HOW GOOD SHE LOOKS!</p>
+          <p>Likes:  <%= post.vote_amount %> </p>
+          <br />
 
           <form class="form-inline" action="/postaurants/voteup" method="post">
             <div class="form-group">
@@ -16,11 +19,8 @@
               <button class="btn-primary" type="submit" name="button">Vote up</button>
             </div>
           </form>
-          <form class="form-inline" action="/restaurants/votedown" method="post">
-            <div class="form-group">
-              <input type="hidden" name="id" value="<%= post.id %>">
-              <button class="btn-danger" type="submit" name="button">Vote down</button>
-            </div>
-          </form>
-      </div>
+        </div>
+
   <% end %>
+ <% end %>
+</div>

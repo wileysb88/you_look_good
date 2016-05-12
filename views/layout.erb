@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>You Look Good</title>
-    <link rel="stylesheet" href="/styles/materialize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/styles/materalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/styles/style.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
@@ -13,7 +13,7 @@
         <div class="username_or_login right-align">
               <% if session[:logged_in] == true %>
                 <div> Hello, <%= @current_user %></div><a href='/users/logout'>Logout</a>
-                <% else %>
+              <% else %>
                 <div>
                 <form class="col s8" action="/users/login" method="post">
                   <div class="">
@@ -34,9 +34,35 @@
         </div>
       </div>
 
+      <div class="navbar-fixed">
+        <nav class="button-collapse">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><div class="row left-header"><img src="images/Slice 1.png" class="chicago-icon left" /><div class="tgfc">TALL GUY FROM CHI</div></div></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li data-menuanchor="about"><a href="#about">About</a></li>
+              <li data-menuanchor="portfolio"><a href="#portfolio">Portfolio</a></li>
+              <li data-menuanchor="causes"><a href="#causes">Donate</a></li>
+              <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li data-menuanchor="about"><a href="#about">About</a></li>
+              <li data-menuanchor="portfolio"><a href="#portfolio">Portfolio</a></li>
+              <li data-menuanchor="causes"><a href="#causes">Donate</a></li>
+              <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
+
+    <% yield %>
+
   </body>
-  <script type="text/javascript" src="/scripts/materlialize.js"></script>
+  <script type="text/javascript" src="/scripts/materialize.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
-  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/app.js">
+
+
+  </script>
 </html>
