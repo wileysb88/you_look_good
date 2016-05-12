@@ -2,22 +2,9 @@ class UsersController < ApplicationController
   # session[:account_message] = ""
 
   get '/' do
-
     erb :login
     # redirect '/' if !session[:logged_in]
-
   end
-
-
-
-
-
-
-
-
-
-
-
 
  #-----------  VVVVVVVVVV        Test Paths
 
