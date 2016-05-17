@@ -13,4 +13,9 @@ body {
   float: left;
   font-family: "Sacramento", cursive; }
 
+.welcome {
+  background: rgba(255, 255, 255, 0.61);
+  margin: 40px;
+  font-size: 36px; }
+
 /*# sourceMappingURL=style.css.map */
