@@ -1,3 +1,11 @@
+.background-tiles, .welcome, .section-header {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 40px;
+  font-size: 36px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 4px; }
+
 body {
   background: #c474d1;
   background-size: cover;
@@ -13,9 +21,24 @@ body {
   float: left;
   font-family: "Sacramento", cursive; }
 
-.welcome {
-  background: rgba(255, 255, 255, 0.61);
+.username_or_login {
+  margin-top: 20px;
+  float: right; }
+
+.login-button {
+  margin-top: 20px;
+  margin-left: 10px; }
+
+.login-row {
+  float: right !important; }
+
+.section-header {
+  width: 100%;
+  margin: 20px; }
+
+.links {
+  background: rgba(255, 255, 255, 0.2);
   margin: 40px;
-  font-size: 36px; }
+  padding: 40px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,16 @@ $lighter-purple: rgb(196, 116, 209);
 $darker-purple: rgb(126, 52, 214);
 $loopy-font: 'Sacramento', cursive;
 $normal-font: 'Raleway', sans-serif;
+$light-background: rgba(255, 255, 255, 0.2);
+
+.background-tiles{
+  background: $light-background;
+  margin: 40px;
+  font-size: 36px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 4px;
+}
 
 
 body{
@@ -22,9 +32,32 @@ body{
   font-family: $loopy-font;
 }
 
+.username_or_login{
+  margin-top: 20px;
+  float: right;
+}
 
-.welcome{
-  background: rgba(255, 255, 255, 0.61);
+.login-button{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.login-row{
+  float: right!important;
+}
+
+.welcome, .section-header{
+  @extend .background-tiles;
+}
+
+.section-header{
+  width: 100%;
+  margin: 20px;
+
+}
+
+.links{
+  background: rgba(255, 255, 255, 0.2);
   margin: 40px;
-  font-size: 36px;
+  padding: 40px;
 }

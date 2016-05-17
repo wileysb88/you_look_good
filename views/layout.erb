@@ -11,13 +11,13 @@
   <body>
     <header>
       <div class="row">
-        <h1 class="title col s4">You Look Good</h1>
+        <h1 class="title col m12 l4">You Look Good</h1>
         <div class="username_or_login col s8">
               <% if session[:logged_in] == true %>
                 <div> Hello, <%= @current_user %></div><a href='/users/logout'>Logout</a>
               <% else %>
                 <div class="row">
-                <form class="col s8" action="/users/login" method="post">
+                <form class="col s8 login-row" action="/users/login" method="post">
                   <div class="row">
                     <div class="input-field col s4">
                       <input id="username" type="text" class="validate">
@@ -27,7 +27,7 @@
                       <input id="password" type="password" class="validate">
                       <label for="password">Password</label>
                     </div>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">LOG IN</button><br>
+                    <button class="btn waves-effect waves-light login-button" type="submit" name="action">LOG IN</button><br>
                   </div>
                 </form></div>
                 <a href='/users/' class="sign_up right-align">Not registered? Sign up!</a>
@@ -57,6 +57,33 @@
     </header>
 
     <%= yield %>
+
+
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5>You Look Good</h5>
+                <p>You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5>Links</h5>
+                <ul>
+                  <li><a  href="#!">Link 1</a></li>
+                  <li><a  href="#!">Link 2</a></li>
+                  <li><a  href="#!">Link 3</a></li>
+                  <li><a  href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Scott Wiley
+            <a class="right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
     <script type="text/javascript" src="/scripts/materialize.js"></script>
