@@ -11,8 +11,8 @@
   <body>
     <header>
       <div class="row">
-        <h1 class="title col m12 l4">You Look Good</h1>
-        <div class="username_or_login col s8">
+        <h1 class="title col m12 l5">You Look Good</h1>
+        <div class="username_or_login col s7">
               <% if session[:logged_in] == true %>
                 <div> Hello, <%= @current_user %></div><a href='/users/logout'>Logout</a>
               <% else %>
@@ -63,14 +63,13 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5>You Look Good</h5>
-                <p>You can use rows and columns here to organize your footer content.</p>
+                <h5 class="fancy">You Look Good</h5>
+                <p>Trying to eliminate the self doubt around the question "How Do I Look?" on post at a time.</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5>Links</h5>
                 <ul>
-                  <li><a  href="#!">Link 1</a></li>
-                  <li><a  href="#!">Link 2</a></li>
+                  <li><a  href="mailto:wileysb@gmail.com">Contact us!</a></li>
+                  <li><a  href="">Checkout our code!</a></li>
                   <li><a  href="#!">Link 3</a></li>
                   <li><a  href="#!">Link 4</a></li>
                 </ul>

@@ -21,6 +21,10 @@ body{
   color: white!important;
 }
 
+
+.fancy{
+  font-family: $loopy-font!important;
+}
 .username_or_login{
   position: relative;
   float: right;
@@ -30,11 +34,23 @@ body{
   position: relative;
   float: left;
   font-family: $loopy-font;
+  font-size: 64px;
+}
+
+.welcome-paragraph{
+  font-size: 18px;
 }
 
 .username_or_login{
   margin-top: 20px;
   float: right;
+}
+
+.sign_up{
+  float: right;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .login-button{
