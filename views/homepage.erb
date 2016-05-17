@@ -1,10 +1,6 @@
 <div class="col s12 ">
 
   <% if session[:logged_in] == true %>
-    <div class="">
-      Welcome to YOU LOOK GOOD! Women regularly ask the question: "How do I look?" This is a site to tell you YOU LOOK GOOD! What you see isn't what the world sees. You may see imperfections. We see beauty. We see uniqueness. See the beauty that we see!!! Post pictures of yourself and get ready to feel the love from the YLG community! We are a culture of positivity - any negative comments will be removed! Please post responsibly. No nudity or graphic content!
-    </div>
-  <% else %>
     <% @posts.each do |post| %>
         <div class="post">
           <p>This is <%= User[id: post.poster_id].username %> </p>
@@ -20,7 +16,11 @@
             </div>
           </form>
         </div>
-
+    <% end %>
+  <% else %>
+    <div class="welcome">
+      Welcome to YOU LOOK GOOD! Women regularly ask the question: "How do I look?" This is a site to tell you YOU LOOK GOOD! What you see isn't what the world sees. You may see imperfections. We see beauty. We see uniqueness. See the beauty that we see!!! Post pictures of yourself and get ready to feel the love from the YLG community! We are a culture of positivity - any negative comments will be removed! Please post responsibly. No nudity or graphic content!
+    </div>
   <% end %>
- <% end %>
+
 </div>

@@ -1,0 +1,16 @@
+body {
+  background: #c474d1;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  color: white !important; }
+
+.username_or_login {
+  position: relative;
+  float: right; }
+
+.title {
+  position: relative;
+  float: left;
+  font-family: "Sacramento", cursive; }
+
+/*# sourceMappingURL=style.css.map */

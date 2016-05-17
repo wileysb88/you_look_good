@@ -29,7 +29,6 @@ class UsersController < ApplicationController
     user.save
     puts user.password
     p "IT UPDATED THE PASSWORD!"
-    session[:account_message] = "Your password has been updated."
     redirect '/'
   end
 
@@ -65,7 +64,7 @@ class UsersController < ApplicationController
       name = params[:username].downcase.gsub("(", " ").gsub("script", "No Scripts, no exceptions").gsub("iframe", "No Scripts, no exceptions").gsub("error", "No Scripts, no exceptions").gsub(".", " ").gsub(")", " ").gsub("{", " ")
       name2 = name.gsub("$", "No Scripts, no exceptions").gsub("<", " ").gsub(">", " ")
 
-      User.create username: name2, password: password, logged_in: true, karma: 0
+      User.create username: name2, password: password, logged_in: true,
       user = User[username: params[:username]]
 
       session[:logged_in] = true
@@ -73,9 +72,7 @@ class UsersController < ApplicationController
       session[:current_user_id] = user[:id]
 
       logged_in = user[:logged_in]
-      session[:account_message] = "Welcome to our site!"
       redirect '/'
-    # "hello your name is #{sessions[:username]} Welcome back! are you logged in? #{logged_in}"
 
   end
 

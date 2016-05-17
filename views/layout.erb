@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>You Look Good</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/styles/materalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/styles/style.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <header>
       <div class="row">
-        <h1 col s4>YOU LOOK GOOD</h1>
-        <div class="username_or_login right-align">
+        <h1 class="title col s4">You Look Good</h1>
+        <div class="username_or_login col s8">
               <% if session[:logged_in] == true %>
                 <div> Hello, <%= @current_user %></div><a href='/users/logout'>Logout</a>
               <% else %>
-                <div>
+                <div class="row">
                 <form class="col s8" action="/users/login" method="post">
-                  <div class="">
+                  <div class="row">
                     <div class="input-field col s4">
                       <input id="username" type="text" class="validate">
                       <label for="username">Username</label>
@@ -28,7 +30,7 @@
                     <button class="btn waves-effect waves-light" type="submit" name="action">LOG IN</button><br>
                   </div>
                 </form></div>
-                <a href='/users/' class="sign_up">Not registered? Sign up!</a>
+                <a href='/users/' class="sign_up right-align">Not registered? Sign up!</a>
                 <!-- <a href="/users">LOGIN/REGISTER</a> -->
               <% end %>
         </div>
@@ -37,19 +39,17 @@
       <div class="navbar-fixed">
         <nav class="button-collapse">
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><div class="row left-header"><img src="images/Slice 1.png" class="chicago-icon left" /><div class="tgfc">TALL GUY FROM CHI</div></div></a>
+            <a href="#" class="brand-logo"><div class="row left-header"></div></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
               <li data-menuanchor="about"><a href="#about">About</a></li>
-              <li data-menuanchor="portfolio"><a href="#portfolio">Portfolio</a></li>
-              <li data-menuanchor="causes"><a href="#causes">Donate</a></li>
-              <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+              <li data-menuanchor="portfolio"><a href="#portfolio">Post</a></li>
+              <li data-menuanchor="causes"><a href="#causes">Account</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
               <li data-menuanchor="about"><a href="#about">About</a></li>
-              <li data-menuanchor="portfolio"><a href="#portfolio">Portfolio</a></li>
-              <li data-menuanchor="causes"><a href="#causes">Donate</a></li>
-              <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+              <li data-menuanchor="portfolio"><a href="#portfolio">Post</a></li>
+              <li data-menuanchor="causes"><a href="#causes">Account</a></li>
             </ul>
           </div>
         </nav>
@@ -57,9 +57,9 @@
     </header>
 
     <% yield %>
-    
-    <script type="text/javascript" src="/scripts/materialize.js"></script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/materialize.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
   </body>

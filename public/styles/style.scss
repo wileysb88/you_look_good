@@ -1,0 +1,23 @@
+$lighter-purple: rgb(196, 116, 209);
+$darker-purple: rgb(126, 52, 214);
+$loopy-font: 'Sacramento', cursive;
+$normal-font: 'Raleway', sans-serif;
+
+
+body{
+  background: $lighter-purple;
+  background-size: cover;
+  font-family: $normal-font;
+  color: white!important;
+}
+
+.username_or_login{
+  position: relative;
+  float: right;
+}
+
+.title{
+  position: relative;
+  float: left;
+  font-family: $loopy-font;
+}
