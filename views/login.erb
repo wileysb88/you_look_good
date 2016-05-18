@@ -1,15 +1,29 @@
-<div class="">
-    <form class="form-horizontal" action="/users/create" method="post">
-    <div class="col s12">
-      <h3 style="color: white">REGISTER</h3>
-      <label for="username" >Username: </label>
-      <input type="text" name="username" value="" placeholder="Choose a username">
-      <br />
-      <label for="Name">Password: </label>
-      <input type="password" name="password" value="" placeholder="Choose a password">
-      <br>
+<div class="row">
+  <form class="col s12 m6" action="/users/login" method="post">
+      <h3 class="fancy">Log In</h3>
+      <div class="input-field col s12">
+        <input id="username" type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+      <button class="btn waves-effect waves-light login-button" type="submit" name="action">LOG IN</button><br>
+  </form>
+  <form  action="/users/create" method="post">
+    <div class="col s12 m6">
+      <h3 class="fancy">Register</h3>
+      <div class="input-field col s12">
+        <input id="username" type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
       <!-- CAN ADD RE-ENTER PASSWORD LATER -->
-      <button type="submit" class="btn btn-primary" name="button">Sign in</button>
+      <button class="btn waves-effect waves-light login-button" type="submit" name="action">REGISTER</button>
     </div>
-    </form>
+  </form>
 </div>

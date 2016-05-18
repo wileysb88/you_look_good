@@ -3,22 +3,21 @@ class UsersController < ApplicationController
 
   get '/' do
     erb :login
-    # redirect '/' if !session[:logged_in]
+    redirect '/' if session[:logged_in]
   end
 
  #-----------  VVVVVVVVVV        Test Paths
 
-  get '/account' do
-    if !session[:logged_in]
-      redirect '/users'
-    end
-    @vote_class = ""
-    @restaurants_list = Restaurant.all
-    @update_user = User[id: session[:current_user_id]]
-    erb :account
-
-
-  end
+  # get '/account' do
+  #   if !session[:logged_in]
+  #     redirect '/users'
+  #   end
+  #   @posts_list = Post.all
+  #   @update_user = User[id: session[:current_user_id]]
+  #   erb :account
+  #
+  #
+  # end
 
   post '/update' do
     user = User[id: session[:current_user_id]]
@@ -40,7 +39,7 @@ class UsersController < ApplicationController
     user.logged_in = false
     user.save
     puts params
-    redirect '/users/all'
+    redirect '/'
   end
 
   # ---- Test page should display the current user
