@@ -19,10 +19,12 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     @posts = Post.all
+    puts "Hello hello"
     erb :homepage
   end
 
   get '/about' do
+    puts "this at least something workeD?"
     erb :about
   end
 

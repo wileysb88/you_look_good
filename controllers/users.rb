@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   get '/' do
     erb :login
-    redirect '/' if session[:logged_in]
   end
 
  #-----------  VVVVVVVVVV        Test Paths
@@ -101,6 +100,29 @@ class UsersController < ApplicationController
 
   end
 
+  # get '/login' do
+  #   # session[:user_id] = User.authenticate(params).id
+  #   user = User[username: params[:username]]
+  #
+  #   compare_to = BCrypt::Password.new(user.password)
+  #   if user && compare_to == params[:password]
+  #     session[:logged_in] = true
+  #     session[:username] = params[:username]
+  #     session[:current_user_id] = user[:id]
+  #     user.logged_in = true
+  #     user.save
+  #     # "Welcome back #{params[:username]}! your session info is #{session[:username]} #{session[:logged_in]}"
+  #     # "hello you are #{session[:username]} Welcome back! Your id is #{session[:current_user_id]} and your karma is #{user[:karma]}"
+  #     session[:account_message] = "Welcome back!"
+  #     redirect '/'
+  #
+  #
+  #   else
+  #     session[:account_message] = "Your password was wrong.  Try again or call the admin at (800) No-Admin"
+  #     redirect '/users'
+  #   end
+  #
+  # end
 
   get '/logout/?' do
 

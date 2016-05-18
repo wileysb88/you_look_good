@@ -5,6 +5,7 @@ class PostsController < ApplicationController
       redirect '/users'
     else
       erb :post
+    end
   end
 
 
